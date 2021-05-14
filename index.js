@@ -14,7 +14,7 @@ const matrix = [
 
 //Se definen Regex para validar las opciones posibles
 const reOP = '^[0-2]$';
-const reCant = '^[1-9]$';
+const reCant = '^[1-9][0-9]*$';
 
 
 //Función para obtener al ganador por cada jugada
@@ -77,5 +77,6 @@ const validate = (exp, regex) => {
 }
 
 //Ejecución
-const cantGames = validate('Ingrese la cantidad de veces que desea jugar', reCant);
+const cantGames = validate('Ingrese la cantidad de veces que desea jugar, se debe ingresar un numero mayor 0', reCant);
 winner(cantGames);
+alert('Todos los resultados se mostrarán por consola')
